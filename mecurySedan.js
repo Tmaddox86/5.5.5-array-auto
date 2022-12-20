@@ -4,7 +4,44 @@ const VehicleModule = require("./vehicleBaseClass")
 //this shows how to call from this module...
 let v = new VehicleModule.Vehicle("Mecury", "Sedan", "1965", "color", "mileage");
 console.log(v.make)
-class Vehicle {
+
+class Car extends VechicleModule {
+    constructor(make, model, year, color, mileage) {
+        super(make, model, year, color, mileage);
+        this.maximumPassenger = 5;
+        this.passenger = 0;
+        this.numberOfWheels = 4;
+        this.maximumSpeed = 160;
+        this.fuel = 10;
+        this.scheduleservice = fasle;
+    }
+
+    loadPassenger(num){
+        if()
+    }
+
+    start(){
+        if()
+    }
+
+    checkService(mileage){
+        if(this.mileage > 30000) {
+            this.scheduleService = true
+            return this.scheduleService;
+        }
+    }
+    super(make, model,year,color,mileage)
+}
+
+let car = new Car('mercury','sedan', '2002', 'blue', '50000' )
+
+
+
+VehicleModule.exports ={ Vehicle}
+
+
+
+/*class Vehicle {
     constructor(make, model, year, color, mileage) {
         this.make = make;
         this.model = model;
